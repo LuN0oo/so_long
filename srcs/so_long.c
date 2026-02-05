@@ -6,13 +6,13 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/04 18:34:37 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:40:12 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	ft_error();
+	
 }

@@ -8,7 +8,9 @@ SRCS_DIR = srcs/
 
 SOURCE = \
 	$(SRCS_DIR)so_long.c \
-	$(SRCS_DIR)manage_error.c
+	$(SRCS_DIR)ft_manage_error.c \
+	$(SRCS_DIR)ft_read_map.c \
+	$(SRCS_DIR)ft_check_valid_map.c
 
 OBJ = $(SOURCE:.c=.o)
 

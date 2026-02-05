@@ -1,33 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_valid_map.c                               :+:      :+:    :+:   */
+/*   ft_parse_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/05 20:11:26 by analaphi         ###   ########.fr       */
+/*   Created: 2026/02/05 20:01:16 by analaphi          #+#    #+#             */
+/*   Updated: 2026/02/05 20:06:35 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int ft_check_border(t_map *map)
+static int ft_split_map(char *content, t_map *map)
 {
 	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (content[i])
+	{
+		if (content[i] == '\n')
+			j++;
+		i++;
+	}
+	map->height = j + 1;
+	return (0);
+}
+
+static int ft_count_element(t_map *map)
+{
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < map->height)
 	{
-		if (map->grid[i][0] != '1' || map->grid[i][map->width - 1] != '1')
-			return (-1);
-		i++;
-	}
-	i = 0;
-	while (i < map->width)
-	{
-		if (map->grid[0][i] != '1' || map->grid[map->height - 1][i] != '1')
-			return (-1);
+		j = 0;
+		while (map->grid[i][j])
+		{
+			if (map->grid[i][j] == 'C')
+				map->collectible_count++;
+			else if (map->grid[i][j] == 'P')
+				map->player_count++;
+			else if (map->grid[i][j] == 'E')
+				map->exit_count++;
+			j++;
+		}
 		i++;
 	}
 	return (0);

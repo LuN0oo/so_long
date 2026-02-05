@@ -8,6 +8,8 @@
 
 # include <stdio.h>
 
+/* ===== TO DELETE AT THE END ===== */
+
 /* ===== Map Struct ===== */
 
 typedef struct s_map {

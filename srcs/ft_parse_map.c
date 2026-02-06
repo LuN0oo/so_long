@@ -6,13 +6,13 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 20:01:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/05 20:06:35 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/06 01:21:04 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int ft_split_map(char *content, t_map *map)
+int	ft_split_map(char *content, t_map *map)
 {
 	int	i;
 	int	j;
@@ -26,10 +26,14 @@ static int ft_split_map(char *content, t_map *map)
 		i++;
 	}
 	map->height = j + 1;
+	i = 0;
+	while (content[i] && content[i] != '\n')
+		i++;
+	map->width = i;
 	return (0);
 }
 
-static int ft_count_element(t_map *map)
+int	ft_count_element(t_map *map)
 {
 	int	i;
 	int	j;

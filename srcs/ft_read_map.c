@@ -6,13 +6,13 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 16:36:17 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/05 20:03:07 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/06 01:19:00 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int	ft_count_lines(int fd)
+int	ft_count_lines(int fd)
 {
 	int		byte_read;
 	char	c;
@@ -29,7 +29,7 @@ static int	ft_count_lines(int fd)
 	return (count + 1);
 }
 
-static char *ft_read_file_content(int fd)
+char	*ft_read_file_content(int fd)
 {
 	char	*content;
 	int		i;
@@ -39,7 +39,7 @@ static char *ft_read_file_content(int fd)
 	content = malloc(1);
 	if (!content)
 		return (NULL);
-	content[0] == '\0';
+	content[0] = '\0';
 	byte_read = read(fd, &content[i], 1);
 	while (byte_read > 0)
 	{

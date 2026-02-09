@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_manage_error.c                                  :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 18:29:01 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/09 12:30:10 by analaphi         ###   ########.fr       */
+/*   Created: 2025/10/29 18:09:12 by analaphi          #+#    #+#             */
+/*   Updated: 2025/11/17 17:19:44 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# include <stdlib.h>
+# include <unistd.h>
 
-void	ft_error(void)
-{
-	write(1, "Error\n", 6);
-	exit(1);
-}
+# ifndef BUFFER_SIZE 
+#  define BUFFER_SIZE 42
+# endif
 
-int	ft_number_exit_player(t_map *map)
-{
-	if (map->player_count != 1)
-		return (-1);
-	if (map->exit_count != 1)
-		return (-1);
-	return (0);
-}
+char	*get_next_line(int fd);
 
-int	ft_minimun_collectible(t_map *map)
-{
-	if (!(map->collectible_count < 1))
-		return (-1);
-	return (0);
-}
+char	*ft_strchr(const char *str, int c);
+char	*ft_strjoin(char *s1, char *s2);
+size_t	ft_strlen(char *str);
+void	*ft_calloc(size_t count, size_t size);
+
+#endif

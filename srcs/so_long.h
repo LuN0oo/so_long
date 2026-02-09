@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/06 01:31:48 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/09 13:04:06 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int		ft_minimun_collectible(t_map *map);
 
 /* ===== Parsing ===== */
 
+int		ft_initialize_map(char *filename, t_map *map);
 int		ft_count_lines(int fd);
 char	*ft_read_file_content(int fd);
 int		ft_split_map(char *content, t_map *map);

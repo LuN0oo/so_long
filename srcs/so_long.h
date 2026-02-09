@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/09 13:04:06 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/09 13:40:51 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include "GNL/get_next_line.h"
 
 /* ===== TO DELETE AT THE END ===== */
 

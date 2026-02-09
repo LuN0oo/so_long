@@ -6,6 +6,8 @@ CCW = cc -Wall -Wextra -Werror
 
 SRCS_DIR = srcs/
 
+GNL_DIR = GNL/
+
 SOURCE = \
 	$(SRCS_DIR)so_long.c \
 	$(SRCS_DIR)ft_manage_error.c \

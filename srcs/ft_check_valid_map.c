@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/11 19:31:19 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/11 21:39:43 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,9 @@ void	ft_check_filename(t_map *map)
 		ft_error_filename();
 	if (!ft_strnstr(map->filename, ".ber", len))
 		ft_error_filename();
+}
+void	ft_check_map(t_map *map)
+{
+	ft_check_filename(map);
+	ft_check_border(map);
 }

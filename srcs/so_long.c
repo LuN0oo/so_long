@@ -6,11 +6,16 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/09 12:29:43 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/11 17:07:20 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+int	ft_initialize(int ac, char **av)
+{
+	
+}
 
 int	main(int ac, char **av)
 {

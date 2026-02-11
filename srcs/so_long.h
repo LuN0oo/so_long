@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/09 13:40:51 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/11 18:22:34 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "GNL/get_next_line.h"
+# include "../GNL/get_next_line.h"
 
 /* ===== TO DELETE AT THE END ===== */
 
@@ -25,40 +25,56 @@
 
 /* ===== Map Struct ===== */
 
-typedef struct s_map
+typedef struct s_player
 {
-	char	**grid;
-	int		width;
-	int		height;
-	int		player_count;
-	int		exit_count;
-	int		collectible_count;
-}	t_map;
+	int	x;
+	int	y;
+}	t_player;
 
-/* ===== Game Struct ===== */
-
-typedef struct s_game
+typedef struct s_img
 {
-	t_map	map;
-	void	*mlx;
-	void	*win;
-	int		player_pos_x;
-	int		player_pos_y;
-	int		moves;
-	int		collected;
 	void	*player_sprite;
 	void	*strawberry_sprite;
 	void	*closed_exit_sprite;
 	void	*opened_exit_sprite;
 	void	*wall_sprite;
 	void	*floor_sprite;
-}	t_game;
+}	t_img;
+
+typedef struct s_map
+{
+	t_player	player;
+	t_img		img;
+	char		*filename;
+	char		*file;
+	char		*line;
+	char		**grid;
+	char		**copy;
+	int			fd;
+	int			width;
+	int			height;
+	int			player_count;
+	int			exit_count;
+	int			exit_check;
+	int			collectible_count;
+	int			collectible_check;
+	int			moves;
+	void		*mlx;
+	void		*win;
+}	t_map;
 
 /* ===== Error Management ===== */
 
-void	ft_error(void);
-int		ft_number_exit_player(t_map *map);
-int		ft_minimun_collectible(t_map *map);
+void	ft_error_filename(void);
+void	ft_error_border(t_map *map);
+void	ft_error_open(void);
+void	ft_error_size(t_map *map);
+void	ft_error_elements(t_map *map);
+
+/* ===== Free functions ===== */
+
+int		ft_free_string(char **str, int i);
+void	ft_free_exit(t_map *map);
 
 /* ===== Parsing ===== */
 
@@ -68,5 +84,6 @@ char	*ft_read_file_content(int fd);
 int		ft_split_map(char *content, t_map *map);
 int		ft_count_element(t_map *map);
 int		ft_check_border(t_map *map);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif

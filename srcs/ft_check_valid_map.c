@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/11 21:39:43 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 15:57:09 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,18 @@ void	ft_check_filename(t_map *map)
 	size_t	len;
 
 	len = ft_strlen(map->filename);
-	if (!map->filename[len - 1] != 'r')
+	if (map->filename[len - 1] != 'r')
 		ft_error_filename();
-	if (!map->filename[len - 2] != 'e')
+	if (map->filename[len - 2] != 'e')
 		ft_error_filename();
-	if (!map->filename[len - 3] != 'b')
+	if (map->filename[len - 3] != 'b')
 		ft_error_filename();
-	if (!map->filename[len - 4] != '.')
+	if (map->filename[len - 4] != '.')
 		ft_error_filename();
 	if (!ft_strnstr(map->filename, ".ber", len))
 		ft_error_filename();
 }
+
 void	ft_check_map(t_map *map)
 {
 	ft_check_filename(map);

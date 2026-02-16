@@ -6,13 +6,13 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/11 21:40:51 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 16:00:29 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	ft_initialize(t_map *map, char **av)
+void	ft_initialize(t_map *map, char **av)
 {
 	map->filename = av[1];
 	map->moves = 0;
@@ -25,11 +25,14 @@ int	ft_initialize(t_map *map, char **av)
 
 int	main(int ac, char **av)
 {
-	t_map *map;
+	t_map	map;
 
 	if (ac == 2)
 	{
 		ft_initialize(&map, av);
 		ft_check_map(&map);
 	}
+	write(2, "\033[1;31mERROR:\n", 15);
+	write(2, "Format : ./so_long map.ber\n\033[0m", 30);
+	exit(EXIT_FAILURE);
 }

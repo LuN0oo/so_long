@@ -6,13 +6,12 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:09:56 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/12 11:47:23 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 15:44:33 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	ft_initialize_map(char *filename, t_map *map)
-{
-	
-}
+// int	ft_initialize_map(char *filename, t_map *map)
+// {
+// }

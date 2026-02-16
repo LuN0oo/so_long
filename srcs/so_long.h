@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/12 11:46:57 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 15:56:34 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_error_size(t_map *map);
 void	ft_error_elements(t_map *map);
 
 void	ft_check_map(t_map *map);
-int		ft_check_border(t_map *map);
+void	ft_check_border(t_map *map);
 void	ft_check_filename(t_map *map);
 
 /* ===== Free functions ===== */

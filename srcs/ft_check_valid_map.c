@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 15:57:09 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 18:21:51 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,61 @@ void	ft_check_filename(t_map *map)
 		ft_error_filename();
 }
 
+void	ft_check_size(t_map *map)
+{
+	int	y;
+	int	x;
+	int	max;
+
+	y = 0;
+	x = 0;
+	max = ft_strlen(map->grid[y]);
+	while (y < map->height)
+	{
+		x = ft_strlen(map->grid[y]);
+		if (max != x)
+			ft_error_size(map);
+		y++;
+	}
+	map->width = max;
+}
+
+void	ft_check_element(t_map *map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < map->height)
+	{
+		while (j < map->width)
+		{
+			if (map->grid[i][j] == 'C')
+				map->c_count++;
+			else if (map->grid[i][j] == 'P')
+				map->p_count++;
+			else if (map->grid[i][j] == 'E')
+				map->e_count++;
+			else if (map->grid[i][j] == '0' || map->grid[i][j] == '1')
+				;
+			else
+				ft_error_elements(map);
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	if (map->c_count < 1 || map->e_count < 1 || map->p_count != 1)
+		ft_error_elements(map);
+}
+
 void	ft_check_map(t_map *map)
 {
 	ft_check_filename(map);
+	ft_generate_map(map);
+	ft_check_size(map);
 	ft_check_border(map);
+	ft_check_element(map);
+	//check_path
+	//free copy grid
 }

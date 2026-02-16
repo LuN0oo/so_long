@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 15:56:34 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 18:13:00 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ typedef struct s_map
 	int			fd;
 	int			width;
 	int			height;
-	int			player_count;
-	int			exit_count;
+	int			p_count;
+	int			e_count;
 	int			exit_check;
-	int			collectible_count;
+	int			c_count;
 	int			collectible_check;
 	int			moves;
 	void		*mlx;
@@ -73,6 +73,8 @@ void	ft_error_elements(t_map *map);
 
 void	ft_check_map(t_map *map);
 void	ft_check_border(t_map *map);
+void	ft_check_size(t_map *map);
+void	ft_check_element(t_map *map);
 void	ft_check_filename(t_map *map);
 
 /* ===== Free functions ===== */
@@ -82,11 +84,12 @@ void	ft_free_exit(t_map *map);
 
 /* ===== Parsing ===== */
 
-int		ft_initialize_map(char *filename, t_map *map);
+void	ft_initialize(t_map *map, char **av);
+void	ft_generate_map(t_map *map);
 int		ft_count_lines(int fd);
 char	*ft_read_file_content(int fd);
-int		ft_split_map(char *content, t_map *map);
-int		ft_count_element(t_map *map);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strjoinfree(char *s1, char *s2);
+char	**ft_split(char const *s, char c);
 
 #endif

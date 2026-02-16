@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 16:00:29 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/16 18:18:55 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_initialize(t_map *map, char **av)
 {
 	map->filename = av[1];
 	map->moves = 0;
-	map->exit_count = 0;
-	map->collectible_count = 0;
-	map->player_count = 0;
+	map->e_count = 0;
+	map->c_count = 0;
+	map->p_count = 0;
 	map->player.x = 0;
 	map->player.y = 0;
 }
@@ -31,6 +31,8 @@ int	main(int ac, char **av)
 	{
 		ft_initialize(&map, av);
 		ft_check_map(&map);
+		printf("SUCCESS");
+		exit(EXIT_SUCCESS);
 	}
 	write(2, "\033[1;31mERROR:\n", 15);
 	write(2, "Format : ./so_long map.ber\n\033[0m", 30);

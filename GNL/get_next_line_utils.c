@@ -6,11 +6,11 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 18:08:50 by analaphi          #+#    #+#             */
-/*   Updated: 2025/11/06 17:28:47 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 18:16:40 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../srcs/so_long.h"
 
 size_t	ft_strlen(char *str)
 {

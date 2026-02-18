@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 17:12:00 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 18:02:13 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ char	*ft_read_file_content(int fd);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoinfree(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
+size_t	ft_strlen(char *str);
 
 #endif

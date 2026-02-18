@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 18:21:51 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:12:52 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,6 @@ void	ft_check_map(t_map *map)
 	ft_check_size(map);
 	ft_check_border(map);
 	ft_check_element(map);
-	//check_path
-	//free copy grid
+	ft_check_valid_path(map);
+	ft_free_string(map->copy, map->height);
 }

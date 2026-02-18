@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:09:54 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 17:06:59 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:13:23 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_move_on_path(int x, int y, t_map *map)
 		map->copy[y][x] = '1';
 	}
 	else if (type == '0' || type == 'P')
-		map->copy[y][x] == '1';
+		map->copy[y][x] = '1';
 	else
 		return ;
 	ft_move_on_path(x + 1, y, map);
@@ -37,7 +37,7 @@ void	ft_move_on_path(int x, int y, t_map *map)
 	ft_move_on_path(x, y - 1, map);
 }
 
-void	check_valid_path(t_map *map)
+void	ft_check_valid_path(t_map *map)
 {
 	map->c_check = map->c_count;
 	map->e_check = map->e_count;

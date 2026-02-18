@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 17:17:49 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 16:45:38 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:06:00 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 char	*ft_strjoinfree(char *s1, char *s2)
 {
-	char *str;
-	size_t s1len;
-	size_t s2len;
-	
+	char	*str;
+	size_t	s1len;
+	size_t	s2len;
+
 	if (!s1)
 	{
 		s1 = (char *)malloc(sizeof(char));

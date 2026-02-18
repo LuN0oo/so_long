@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 16:54:36 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:00:30 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ typedef struct s_map
 	int			height;
 	int			p_count;
 	int			e_count;
-	int			exit_check;
+	int			e_check;
 	int			c_count;
-	int			collectible_check;
+	int			c_check;
 	int			moves;
 	void		*mlx;
 	void		*win;
@@ -84,6 +84,7 @@ void	ft_check_border(t_map *map);
 void	ft_check_size(t_map *map);
 void	ft_check_element(t_map *map);
 void	ft_check_filename(t_map *map);
+void	check_valid_path(t_map *map);
 void	ft_move_on_path(int x, int y, t_map *map);
 void	ft_scan_player(t_map *map);
 

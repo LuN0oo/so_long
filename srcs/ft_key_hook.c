@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:34:26 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 16:45:26 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:06:09 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,26 @@ void	ft_scan_player(t_map *map)
 			map->player.x++;
 		}
 		if (map->grid[map->player.y][map->player.x] == 'P')
-				break ;
+			break ;
 		map->player.x = 0;
 		map->player.y++;
 	}
 }
 
-int	ft_keyhook(int keycode, t_map *map)
-{
-	ft_scan_player(map);
-	if (keycode == ESC)
-		//close window()
-	else if (map->exit_check == 1)
-		return (0);
-	else if (keycode == UP)
-		//move_up()
-	else if (keycode == DOWN)
-		//move_down()
-	else if (keycode == LEFT)
-		//move_left()
-	else if (keycode == RIGHT)
-		//move_right()
-	return (0);
-}
+// int	ft_keyhook(int keycode, t_map *map)
+// {
+// 	ft_scan_player(map);
+// 	if (keycode == ESC)
+// 		//close window()
+// 	else if (map->e_count == 1)
+// 		return (0);
+// 	else if (keycode == UP)
+// 		//move_up()
+// 	else if (keycode == DOWN)
+// 		//move_down()
+// 	else if (keycode == LEFT)
+// 		//move_left()
+// 	else if (keycode == RIGHT)
+// 		//move_right()
+// 	return (0);
+// }

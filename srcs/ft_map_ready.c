@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:09:56 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/16 18:04:33 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:06:28 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_generate_map(t_map *map)
 {
-	int fd;
+	int	fd;
 
 	map->height = 0;
 	map->line = "";

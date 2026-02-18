@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 18:02:13 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:03:15 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include "../GNL/get_next_line.h"
+# include "../mlx/mlx.h"
 
 /* ===== TO DELETE AT THE END ===== */
 
@@ -25,11 +26,13 @@
 
 /* ===== KEYCODE ===== */
 
-# define ESC	53
+# define ESC		53
 # define UP
 # define DOWN
 # define LEFT
 # define RIGHT
+# define IMG_PXL	50
+# define WDN_NAME	"so_long"
 
 /* ===== Map Struct ===== */
 
@@ -68,7 +71,7 @@ typedef struct s_map
 	int			c_check;
 	int			moves;
 	void		*mlx;
-	void		*win;
+	void		*wdn;
 }	t_map;
 
 /* ===== Error Management ===== */

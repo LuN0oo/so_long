@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 19:03:15 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/20 16:23:45 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@
 
 /* ===== KEYCODE ===== */
 
-# define ESC		53
-# define UP
-# define DOWN
-# define LEFT
-# define RIGHT
+# define ESC		65307
+# define UP			119
+# define DOWN		115
+# define LEFT		97
+# define RIGHT		100
 # define IMG_PXL	50
 # define WDN_NAME	"so_long"
 

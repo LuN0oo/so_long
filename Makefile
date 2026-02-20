@@ -6,8 +6,6 @@ CCW = cc -Wall -Wextra -Werror
 
 SRCS_DIR = srcs/
 
-GNL_DIR = GNL/
-
 SOURCE = \
 	$(SRCS_DIR)ft_check_valid_map.c \
 	$(SRCS_DIR)ft_check_valid_path.c \
@@ -18,31 +16,30 @@ SOURCE = \
 	$(SRCS_DIR)ft_read_map.c \
 	$(SRCS_DIR)ft_split.c \
 	$(SRCS_DIR)ft_str_utils.c \
-	$(SRCS_DIR)so_long.c
-
-GNL_SOURCES = \
-	$(GNL_DIR)get_next_line_utils.c \
-	$(GNL_DIR)get_next_line.c \
+	$(SRCS_DIR)so_long.c \
+	GNL/get_next_line_utils.c \
+	GNL/get_next_line.c
 
 OBJ = $(SOURCE:.c=.o)
 
-GNL_OBJ = $(GNL_SOURCES:.c=.o)
+MLX_DIR		= mlx
+MLX_LIB		= $(MLX_DIR)/libmlx.a
+MLX_FLAGS	= -L$(MLX_DIR) -lmlx -lXext -lX11 -lm
+
+INCLUDES	= -I. -I$(MLX_DIR) -Ignl
 
 # ===================== RULES ===================== #
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(GNL_OBJ)
-	$(CCW) -o $@ $^ -lm
+$(NAME) : $(OBJ) $(MLX_LIB)
+	$(CCW) $(OBJ) $(MLX_FLAGS) -o $(NAME)
 
-# %.o: %.c
-# 	$(CCW) -c $< -o $@
+$(MLX_LIB):
+	make -C $(MLX_DIR)
 
-$(SRCS_DIR)%.o: $(SRCS_DIR)%.c
-	$(CCW) -c $< -o $@
-
-$(GNL_DIR)%.o: $(GNL_DIR)%.c
-	$(CCW) -c $< -o $@
+%.o: %.c so_long.h
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 # ===================== CLEAN ===================== #
 

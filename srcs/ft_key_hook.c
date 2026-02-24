@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:34:26 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 17:06:09 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/24 18:45:39 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ void	ft_scan_player(t_map *map)
 	}
 }
 
-// int	ft_keyhook(int keycode, t_map *map)
-// {
-// 	ft_scan_player(map);
-// 	if (keycode == ESC)
-// 		//close window()
-// 	else if (map->e_count == 1)
-// 		return (0);
-// 	else if (keycode == UP)
-// 		//move_up()
-// 	else if (keycode == DOWN)
-// 		//move_down()
-// 	else if (keycode == LEFT)
-// 		//move_left()
-// 	else if (keycode == RIGHT)
-// 		//move_right()
-// 	return (0);
-// }
+int	ft_keyhook(int keycode, t_map *map)
+{
+	ft_scan_player(map);
+	if (keycode == ESC)
+		return (ft_close(map));
+	else if (map->exit == 1)
+		return (0);
+	else if (keycode == UP)
+		ft_move_up(map);
+	else if (keycode == DOWN)
+		ft_move_down(map);
+	else if (keycode == LEFT)
+		ft_move_left(map);
+	else if (keycode == RIGHT)
+		ft_move_right(map);
+	return (0);
+}

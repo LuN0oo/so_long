@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/20 16:23:45 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/24 18:46:15 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <limits.h>
 # include "../GNL/get_next_line.h"
 # include "../mlx/mlx.h"
 
@@ -44,12 +45,11 @@ typedef struct s_player
 
 typedef struct s_img
 {
-	void	*player_sprite;
-	void	*strawberry_sprite;
-	void	*closed_exit_sprite;
-	void	*opened_exit_sprite;
-	void	*wall_sprite;
-	void	*floor_sprite;
+	void	*player;
+	void	*strawberry;
+	void	*heart;
+	void	*wall;
+	void	*floor;
 }	t_img;
 
 typedef struct s_map
@@ -69,6 +69,7 @@ typedef struct s_map
 	int			e_check;
 	int			c_count;
 	int			c_check;
+	int			exit;
 	int			moves;
 	void		*mlx;
 	void		*wdn;
@@ -106,5 +107,21 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoinfree(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlen(char *str);
+size_t	ft_intlen(int c);
+char	*ft_itoa(int n);
+
+/* ===== Actual Game ===== */
+
+void	ft_file_to_image(t_map *map);
+void	ft_print_map(t_map *map);
+void	ft_print_nb_move(t_map *map);
+int		ft_close(t_map *map);
+void	ft_win(t_map *map);
+
+int		ft_keyhook(int keycode, t_map *map);
+void	ft_move_up(t_map *map);
+void	ft_move_down(t_map *map);
+void	ft_move_left(t_map *map);
+void	ft_move_right(t_map *map);
 
 #endif

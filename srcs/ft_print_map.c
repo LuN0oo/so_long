@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 16:29:30 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/24 18:44:37 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/24 20:05:46 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	ft_print_element(t_map *map, int x, int y)
 {
 	int	elem;
 
-	elem = map->grid[x / IMG_PXL][y / IMG_PXL];
+	elem = map->grid[y / IMG_PXL][x / IMG_PXL];
 	if (elem == 'C' || elem == 'P' || elem == 'E' || elem == '0')
 		mlx_put_image_to_window(map->mlx, map->wdn, map->img.floor, x, y);
 	if (elem == 'C')

@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/24 18:46:15 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/24 20:00:41 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # define DOWN		115
 # define LEFT		97
 # define RIGHT		100
-# define IMG_PXL	50
+# define IMG_PXL	32
 # define WDN_NAME	"so_long"
 
 /* ===== Map Struct ===== */

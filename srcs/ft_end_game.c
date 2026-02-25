@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:29:26 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/24 17:43:10 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/25 18:41:26 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,19 @@
 
 int	ft_close(t_map *map)
 {
+	if (map->img.floor)
+		mlx_destroy_image(map->mlx, map->img.floor);
+	if (map->img.wall)
+		mlx_destroy_image(map->mlx, map->img.wall);
+	if (map->img.player)
+		mlx_destroy_image(map->mlx, map->img.player);
+	if (map->img.strawberry)
+		mlx_destroy_image(map->mlx, map->img.strawberry);
+	if (map->img.heart)
+		mlx_destroy_image(map->mlx, map->img.heart);
 	mlx_destroy_window(map->mlx, map->wdn);
+	mlx_destroy_display(map->mlx);
+	free(map->mlx);
 	ft_free_string(map->grid, map->height);
 	exit(EXIT_SUCCESS);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/24 20:00:41 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/25 18:40:57 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # include <limits.h>
 # include "../GNL/get_next_line.h"
 # include "../mlx/mlx.h"
-
-/* ===== TO DELETE AT THE END ===== */
-
-# include <stdio.h>
-
-/* ===== TO DELETE AT THE END ===== */
 
 /* ===== KEYCODE ===== */
 

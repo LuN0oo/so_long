@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/18 17:12:52 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/25 18:16:36 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void	ft_check_element(t_map *map)
 	i = 0;
 	while (i < map->height)
 	{
+		j = 0;
 		while (j < map->width)
 		{
 			if (map->grid[i][j] == 'C')
@@ -90,7 +91,6 @@ void	ft_check_element(t_map *map)
 				ft_error_elements(map);
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	if (map->c_count < 1 || map->e_count < 1 || map->p_count != 1)

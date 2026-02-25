@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 17:45:35 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/24 18:45:09 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/02/25 16:53:11 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_update_move(t_map *map, int x, int y, int dir)
 		x -= 1;
 	if (dir == RIGHT)
 		x += 1;
-	if (map->grid[y][x] == 'E' && map->c_count)
+	if (map->grid[y][x] == 'E' && map->c_count == 0)
 		return (ft_win(map));
 	if (map->grid[y][x] == 'C')
 	{

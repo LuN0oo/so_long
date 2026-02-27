@@ -1,4 +1,4 @@
-*This project has been created has part of the 42 curriculum by analaphi*
+*This project has been created has part of the 42 curriculum by analaphi.*
 
 ## Description
 
@@ -6,8 +6,8 @@ The project consist of having a working **2D TopDown view game** where you spawn
 
 ## Instructions
 
-**WORK IN PROGRESS**
+First, you'll have to download the mlx folder given in the subject page and extract it in my so_long folder. Once this is done, you can 'make' in the root and there will be a new executable **so_long**. To launch the game, execute this command : "./so_long maps/<MAP_YOU_WANT> and now you can enjoy !
 
 ## Ressources 
 
-**WORK IN PROGRESS**
+For this project, the subject was really intuitive for me so it was a bit easier that the others projects. I got some help from my friends concerning the mlx implementation and how sprites works with the minilibx, and some Makefile things to compile the MLX and implement my get_next_line into the project.

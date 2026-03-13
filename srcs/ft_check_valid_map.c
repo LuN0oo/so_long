@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/25 18:16:36 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:41:14 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,18 @@ void	ft_check_size(t_map *map)
 	int	max;
 
 	y = 0;
-	x = 0;
-	max = ft_strlen(map->grid[y]);
+	if (map->height <= 0 || !map->grid || !map->grid[0])
+		ft_error_size(map);
+	x = ft_strlen(map->grid[0]);
+	if (x <= 0)
+		ft_error_size(map);
+	max = x;
 	while (y < map->height)
 	{
+		if (!map->grid[y])
+			ft_error_size(map);
 		x = ft_strlen(map->grid[y]);
-		if (max != x)
+		if (x <= 0 || max != x)
 			ft_error_size(map);
 		y++;
 	}

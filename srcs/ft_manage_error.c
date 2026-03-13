@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:01 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/11 19:34:04 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:38:34 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,11 @@ void	ft_error_size(t_map *map)
 {
 	write(2, "\033[1;31mERROR: ", 14);
 	write(2, "Wrong size.\n\033[0m", 16);
-	ft_free_string(map->grid, map->height);
-	ft_free_string(map->copy, map->height);
+	if (map && map->grid)
+	{
+		ft_free_nl(map->grid);
+		ft_free_nl(map->copy);
+	}
 	exit(EXIT_FAILURE);
 }
 

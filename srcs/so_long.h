@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/25 18:40:57 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:41:36 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	ft_scan_player(t_map *map);
 /* ===== Free functions ===== */
 
 int		ft_free_string(char **str, int i);
+int		ft_free_nl(char **str);
 void	ft_free_exit(t_map *map);
 
 /* ===== Parsing ===== */

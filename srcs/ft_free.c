@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 17:24:29 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/11 19:31:32 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:31:37 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,22 @@ int	ft_free_string(char **str, int i)
 {
 	while (i > 0)
 		free(str[--i]);
+	free(str);
+	return (0);
+}
+
+int	ft_free_nl(char **str)
+{
+	int	i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
 	free(str);
 	return (0);
 }

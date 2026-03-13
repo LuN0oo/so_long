@@ -17,7 +17,6 @@ SOURCE = \
 	$(SRCS_DIR)ft_map_ready.c \
 	$(SRCS_DIR)ft_movements.c \
 	$(SRCS_DIR)ft_print_map.c \
-	$(SRCS_DIR)ft_read_map.c \
 	$(SRCS_DIR)ft_split.c \
 	$(SRCS_DIR)ft_str_utils.c \
 	$(SRCS_DIR)so_long.c \

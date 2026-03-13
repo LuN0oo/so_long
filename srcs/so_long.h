@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/03/13 16:41:36 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:49:22 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,6 @@ void	ft_free_exit(t_map *map);
 
 void	ft_initialize(t_map *map, char **av);
 void	ft_generate_map(t_map *map);
-int		ft_count_lines(int fd);
-char	*ft_read_file_content(int fd);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strjoinfree(char *s1, char *s2);
 char	**ft_split(char const *s, char c);

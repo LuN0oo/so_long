@@ -2,7 +2,7 @@
 
 NAME = so_long
 
-CCW = cc -Wall -Wextra -Werror
+CCW = cc -g -Wall -Wextra -Werror
 
 SRCS_DIR = srcs/
 
@@ -43,12 +43,12 @@ $(MLX_LIB):
 	make -C $(MLX_DIR)
 
 %.o: %.c so_long.h
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CCW) $(INCLUDES) -c $< -o $@
 
 # ===================== CLEAN ===================== #
 
 clean :
-	rm -rf $(OBJ) $(GNL_OBJ)
+	rm -rf $(OBJ)
 
 fclean : clean
 	rm -rf $(NAME)

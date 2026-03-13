@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/03/13 16:49:22 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 17:32:39 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	*ft_itoa(int n);
 
 /* ===== Actual Game ===== */
 
-void	ft_file_to_image(t_map *map);
+int		ft_file_to_image(t_map *map);
 void	ft_print_map(t_map *map);
 void	ft_print_nb_move(t_map *map);
 int		ft_close(t_map *map);

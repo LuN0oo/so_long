@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/25 16:35:29 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 17:26:56 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,11 @@ int	main(int ac, char **av)
 		map.mlx = mlx_init();
 		map.wdn = mlx_new_window(map.mlx, map.width
 				* IMG_PXL, map.height * IMG_PXL, WDN_NAME);
-		ft_file_to_image(&map);
+		if (ft_file_to_image(&map) == 1)
+		{
+			write(2, "Texture Error\n", 13);
+			ft_close(&map);
+		}
 		ft_print_map(&map);
 		mlx_hook(map.wdn, 17, 0, ft_close, &map);
 		mlx_key_hook(map.wdn, ft_keyhook, &map);

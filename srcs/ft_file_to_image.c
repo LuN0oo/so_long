@@ -6,13 +6,13 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 16:08:17 by analaphi          #+#    #+#             */
-/*   Updated: 2026/02/25 17:45:11 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/13 17:23:24 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	ft_file_to_image(t_map *map)
+int	ft_file_to_image(t_map *map)
 {
 	int	a;
 
@@ -27,4 +27,8 @@ void	ft_file_to_image(t_map *map)
 			"textures/Wall.xpm", &a, &a);
 	map->img.floor = mlx_xpm_file_to_image(map->mlx,
 			"textures/Ground.xpm", &a, &a);
+	if (!map->img.player || !map->img.strawberry || !map->img.heart
+		|| !map->img.wall || !map->img.floor)
+		return (1);
+	return (0);
 }

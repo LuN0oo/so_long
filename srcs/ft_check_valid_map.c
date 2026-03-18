@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:25:10 by analaphi          #+#    #+#             */
-/*   Updated: 2026/03/13 16:41:14 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/18 15:37:56 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void	ft_check_element(t_map *map)
 		}
 		i++;
 	}
-	if (map->c_count < 1 || map->e_count < 1 || map->p_count != 1)
+	if (map->c_count < 1 || map->e_count != 1 || map->p_count != 1)
 		ft_error_elements(map);
 }
 

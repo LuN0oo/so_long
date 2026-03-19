@@ -20,6 +20,7 @@ SOURCE = \
 	$(SRCS_DIR)ft_split.c \
 	$(SRCS_DIR)ft_str_utils.c \
 	$(SRCS_DIR)so_long.c \
+	$(SRCS_DIR)ft_check_if_map_too_big.c \
 	GNL/get_next_line_utils.c \
 	GNL/get_next_line.c
 

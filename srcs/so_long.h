@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 01:03:16 by analaphi          #+#    #+#             */
-/*   Updated: 2026/03/13 17:32:39 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/19 14:54:50 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void	ft_error_border(t_map *map);
 void	ft_error_open(void);
 void	ft_error_size(t_map *map);
 void	ft_error_elements(t_map *map);
+void	ft_map_too_big(t_map *map);
 
 void	ft_check_map(t_map *map);
 void	ft_check_border(t_map *map);
@@ -85,6 +86,7 @@ void	ft_check_filename(t_map *map);
 void	ft_check_valid_path(t_map *map);
 void	ft_move_on_path(int x, int y, t_map *map);
 void	ft_scan_player(t_map *map);
+void	ft_check_if_map_too_big(t_map *map);
 
 /* ===== Free functions ===== */
 

@@ -6,7 +6,7 @@
 /*   By: analaphi <analaphi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:29:06 by analaphi          #+#    #+#             */
-/*   Updated: 2026/03/13 17:26:56 by analaphi         ###   ########.fr       */
+/*   Updated: 2026/03/20 14:03:11 by analaphi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int ac, char **av)
 				* IMG_PXL, map.height * IMG_PXL, WDN_NAME);
 		if (ft_file_to_image(&map) == 1)
 		{
-			write(2, "Texture Error\n", 13);
+			write(2, "Texture Error\n", 14);
 			ft_close(&map);
 		}
 		ft_print_map(&map);
